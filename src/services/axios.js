@@ -1,9 +1,9 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: 'https://www.metaweather.com/api/',
+    baseURL: 'https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/',
     headers: {
-        "Access-Control-Allow-Origin": "true"
+        "Content-Type": "application/json"
     }
 });
 

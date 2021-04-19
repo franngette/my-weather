@@ -17,7 +17,6 @@ const Content = () => {
                 getWeather(res[0].woeid).then((res) => {
                     setWeather(res)
                     setError()
-
                 })
             } else {
                 setError('City not found')
@@ -40,7 +39,6 @@ const Content = () => {
             getLocationIdByGeo(position.latitude, position.longitude).then((res) => {
                 getWeather(res[0].woeid).then((res) => {
                     setWeather(res)
-                    console.log(res)
                 })
             })
         }
@@ -54,9 +52,9 @@ const Content = () => {
                     <InputGroup.Prepend>
                         <Button variant="info" onClick={getWeatherByCity}>Search your city</Button>
                     </InputGroup.Prepend>
-                    <FormControl aria-describedby="searchcity" onChange={(e) => setCity(e.target.value)} />
+                    <FormControl aria-describedby="searchcity" onChange={(e) => setCity(e.target.value)} placeholder="City Name"/>
                 </InputGroup>
-                <Button variant="info" onClick={getLocation}>Refresh</Button>
+                <Button variant="info" onClick={getLocation}>Here!</Button>
             </section>
             {error &&
                 <Alert variant='danger'>

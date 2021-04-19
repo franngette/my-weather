@@ -6,7 +6,7 @@ import weatherImage from './weatherImages'
 const Widget = ({ weather, day = 0 }) => {
     return (
         <div className='widget' >
-            <div className='widget__imageoverlay' style={{ backgroundImage: `url(${weatherImage[weather.consolidated_weather[day].weather_state_abbr]})`, backgroundSize: 'cover', backdropFilter: 'blur(2px)' }}></div>
+            <div className='widget__imageoverlay' style={{ backgroundImage: `url(${weatherImage[weather?.consolidated_weather[day]?.weather_state_abbr]})`, backgroundSize: 'cover', backdropFilter: 'blur(2px)' }}></div>
             <div className='widget__overlay'>
                 <div>
                     <h1>{weather?.title}</h1>
