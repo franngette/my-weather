@@ -7,4 +7,10 @@
   justify-content: center;
   align-items: center;
   background-color: colors.$light-color;
+  &__title {
+    font-family: "Lobster", cursive;
+    font-size: 40px;
+    font-weight: 800;
+    color: #17a2b8;
+  }
 }
