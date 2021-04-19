@@ -1,6 +1,9 @@
 # My Weather
 
 My Weather is a SPA that shows the weather in your nearby city and allows you to find the weather in another city.
+# Important!
+
+To allow the web page to get data from the API, you need to allow the cors proxy by entering here: https://cors-anywhere.herokuapp.com/
 ## Installation
 
 * Clone the repo.

@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'
 
 
 const WidgetContainer = ({ weather }) => {
-    const [day, setDay] = useState(0)
+    const [day, setDay] = useState(1)
     return (
         <Container>
             <Row>

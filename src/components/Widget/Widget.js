@@ -3,7 +3,7 @@ import './Widget.scss'
 import weatherImage from './weatherImages'
 
 
-const Widget = ({ weather, day = 0 }) => {
+const Widget = ({ weather, day }) => {
     return (
         <div className='widget' >
             <div className='widget__imageoverlay' style={{ backgroundImage: `url(${weatherImage[weather?.consolidated_weather[day]?.weather_state_abbr]})`, backgroundSize: 'cover', backdropFilter: 'blur(2px)' }}></div>
@@ -11,7 +11,7 @@ const Widget = ({ weather, day = 0 }) => {
                 <div>
                     <h1>{weather?.title}</h1>
                     <p className='overlay__date'>{new Date(weather.consolidated_weather[day]?.applicable_date).toLocaleString("default", { weekday: "long" })}</p>
-                    <p>{new Date(weather.consolidated_weather[day]?.applicable_date).toLocaleString()}</p>
+                    <p>{new Date(weather.consolidated_weather[day]?.applicable_date).toLocaleDateString()}</p>
                 </div>
                 <div>
                     <p>{weather.consolidated_weather[day]?.weather_state_name}</p>
