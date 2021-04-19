@@ -1,9 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
-
-import './Content.scss'
 import { getLocationIdByGeo, getWeather, getLocationIdByName } from '../../services/axios';
 import WidgetContainer from '../WidgetContainer/WidgetContainer';
 import { Button, InputGroup, FormControl, Alert } from 'react-bootstrap';
+import './Content.scss'
 
 const Content = () => {
     const [position, setPosition] = useState({ latitude: '-37.9860222', longitude: '-57.5646115' });

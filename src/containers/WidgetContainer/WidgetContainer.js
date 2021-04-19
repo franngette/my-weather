@@ -4,6 +4,7 @@ import Widget from '../../components/Widget/Widget';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import PropTypes from "prop-types";
 
 
 const WidgetContainer = ({ weather }) => {
@@ -23,6 +24,10 @@ const WidgetContainer = ({ weather }) => {
             </Row>
         </Container>
     );
+}
+
+WidgetContainer.propTypes = {
+    weather: PropTypes.object.isRequired
 }
 
 export default WidgetContainer;

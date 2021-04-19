@@ -1,9 +1,10 @@
 import React from 'react';
 import './Widget.scss'
 import weatherImage from './weatherImages'
+import PropTypes from "prop-types";
 
 
-const Widget = ({ weather, day }) => {
+const Widget = ({ weather, day = 1 }) => {
     return (
         <div className='widget' >
             <div className='widget__imageoverlay' style={{ backgroundImage: `url(${weatherImage[weather?.consolidated_weather[day]?.weather_state_abbr]})`, backgroundSize: 'cover', backdropFilter: 'blur(2px)' }}></div>
@@ -43,6 +44,11 @@ const Widget = ({ weather, day }) => {
         </div>
 
     )
+}
+
+Widget.propTypes = {
+    weather: PropTypes.object.isRequired,
+    day: PropTypes.number
 }
 
 export default Widget;
