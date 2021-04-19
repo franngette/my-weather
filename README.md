@@ -5,7 +5,7 @@ My Weather is a SPA that shows the weather in your nearby city and allows you to
 
 * Clone the repo.
 ```
-git clone https://github.com/your_username_/Project-Name.git
+git clone https://github.com/franngette/my-weather.git
 ```
 
 * Install packages.
