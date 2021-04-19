@@ -1,0 +1,66 @@
+@use '../../styles/colors';
+
+.widget {
+  height: 50vh;
+  width: 100%;
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  position: relative;
+  text-shadow: 1px 1px 2px black;
+  &__imageoverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(5px);
+    height: 100%;
+    width: 100%;
+  }
+  &__overlay {
+    z-index: 1;
+    flex: 1;
+    font-size: 24px;
+    font-weight: 800;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  &__info {
+    z-index: 1;
+    flex: 1;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: colors.$overlay-color;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  &__type {
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+}
+
+.overlay {
+  &__temperature {
+    font-size: 48px;
+  }
+  &__date {
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

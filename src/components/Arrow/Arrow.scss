@@ -1,0 +1,14 @@
+@use '../../styles/colors';
+
+.arrow {
+  border: none;
+  color: colors.$primary-color;
+  background-color: colors.$light-color;
+  border-radius: 10px;
+  height: 3rem;
+  width: 3rem;
+  &:hover {
+    background-color: colors.$primary-color;
+    color: colors.$light-color;
+  }
+}
