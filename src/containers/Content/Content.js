@@ -52,7 +52,7 @@ const Content = () => {
                     <InputGroup.Prepend>
                         <Button variant="info" onClick={getWeatherByCity}>Search your city</Button>
                     </InputGroup.Prepend>
-                    <FormControl aria-describedby="searchcity" onChange={(e) => setCity(e.target.value)} placeholder="City Name"/>
+                    <FormControl aria-describedby="searchcity" aria-label="search city" onChange={(e) => setCity(e.target.value)} placeholder="City Name" />
                 </InputGroup>
                 <Button variant="info" onClick={getLocation}>Here!</Button>
             </section>

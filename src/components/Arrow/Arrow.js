@@ -5,7 +5,7 @@ import './Arrow.scss'
 
 const Arrow = ({ onClick, orientation }) => {
     return (
-        <button onClick={onClick} className='arrow'>
+        <button onClick={onClick} className='arrow' aria-label="arrow">
             <FontAwesomeIcon icon={orientation === 'right' ? faArrowRight : faArrowLeft} />
         </button>
     );
